@@ -15,6 +15,7 @@
 		0A4E28781C7F393D00FAC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */; };
 		0A4E28831C7F393D00FAC06F /* IdCardOCRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E28821C7F393D00FAC06F /* IdCardOCRTests.m */; };
 		0A4E288E1C7F393D00FAC06F /* IdCardOCRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */; };
+		7119FD2847C0F1C954D4B814 /* libPods-IdCardOCR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		0A4E28891C7F393D00FAC06F /* IdCardOCRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdCardOCRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCardOCRUITests.m; sourceTree = "<group>"; };
 		0A4E288F1C7F393D00FAC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdCardOCR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR.debug.xcconfig"; sourceTree = "<group>"; };
+		435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IdCardOCR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdCardOCR.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7119FD2847C0F1C954D4B814 /* libPods-IdCardOCR.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				0A4E28811C7F393D00FAC06F /* IdCardOCRTests */,
 				0A4E288C1C7F393D00FAC06F /* IdCardOCRUITests */,
 				0A4E28661C7F393D00FAC06F /* Products */,
+				D99CAAF29403B14DF3193ED8 /* Pods */,
+				241B5715F6D8FA20F7E314F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = IdCardOCRUITests;
 			sourceTree = "<group>";
 		};
+		241B5715F6D8FA20F7E314F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D99CAAF29403B14DF3193ED8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */,
+				ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A4E28921C7F393D00FAC06F /* Build configuration list for PBXNativeTarget "IdCardOCR" */;
 			buildPhases = (
+				348AAABE0BD64425EE4BD230 /* Check Pods Manifest.lock */,
 				0A4E28611C7F393D00FAC06F /* Sources */,
 				0A4E28621C7F393D00FAC06F /* Frameworks */,
 				0A4E28631C7F393D00FAC06F /* Resources */,
+				C4D3DF17437FEE1C5FF9F62D /* Embed Pods Frameworks */,
+				4E2786418D19B97A8813CB5B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		348AAABE0BD64425EE4BD230 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E2786418D19B97A8813CB5B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4D3DF17437FEE1C5FF9F62D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A4E28611C7F393D00FAC06F /* Sources */ = {
@@ -409,6 +484,7 @@
 		};
 		0A4E28931C7F393D00FAC06F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IdCardOCR/Info.plist;
@@ -420,6 +496,7 @@
 		};
 		0A4E28941C7F393D00FAC06F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IdCardOCR/Info.plist;
@@ -496,6 +573,7 @@
 				0A4E28941C7F393D00FAC06F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A4E28951C7F393D00FAC06F /* Build configuration list for PBXNativeTarget "IdCardOCRTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +582,7 @@
 				0A4E28971C7F393D00FAC06F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A4E28981C7F393D00FAC06F /* Build configuration list for PBXNativeTarget "IdCardOCRUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +591,7 @@
 				0A4E289A1C7F393D00FAC06F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
