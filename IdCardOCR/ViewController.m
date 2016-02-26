@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "UIImage+IDOImgPrc.h"
+
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UIButton *autoRunnerBtn;
 @property (nonatomic, strong) UIButton *pickerBtn;
@@ -53,7 +55,7 @@
 
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     if (image) {
-        self.imageView.image = image;
+        self.imageView.image = [image ido_darkWhiteImage:.1];
         CGFloat height = self.imageView.bounds.size.width / image.size.width * image.size.height;
         CGRect frame = self.imageView.frame;
         frame.size.height = height;

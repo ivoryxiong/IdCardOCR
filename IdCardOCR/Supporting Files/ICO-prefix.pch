@@ -1,0 +1,23 @@
+//
+//  ICO.pch
+//  IdCardOCR
+//
+//  Created by Hua Xiong on 16/2/26.
+//  Copyright © 2016年 ivoryxiong. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#endif

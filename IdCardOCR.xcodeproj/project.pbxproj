@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4A3F911C80505200235912 /* UIImage+IDOImgPrc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A3F901C80505200235912 /* UIImage+IDOImgPrc.mm */; };
 		0A4E286A1C7F393D00FAC06F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E28691C7F393D00FAC06F /* main.m */; };
 		0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E286C1C7F393D00FAC06F /* AppDelegate.m */; };
 		0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E286F1C7F393D00FAC06F /* ViewController.m */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4A3F8F1C80505200235912 /* UIImage+IDOImgPrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IDOImgPrc.h"; sourceTree = "<group>"; };
+		0A4A3F901C80505200235912 /* UIImage+IDOImgPrc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+IDOImgPrc.mm"; sourceTree = "<group>"; };
+		0A4A3F941C80528E00235912 /* ICO-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ICO-prefix.pch"; sourceTree = "<group>"; };
 		0A4E28651C7F393D00FAC06F /* IdCardOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdCardOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E28691C7F393D00FAC06F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A4E286B1C7F393D00FAC06F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,12 +90,12 @@
 		0A4E285C1C7F393D00FAC06F = {
 			isa = PBXGroup;
 			children = (
+				241B5715F6D8FA20F7E314F5 /* Frameworks */,
 				0A4E28671C7F393D00FAC06F /* IdCardOCR */,
 				0A4E28811C7F393D00FAC06F /* IdCardOCRTests */,
 				0A4E288C1C7F393D00FAC06F /* IdCardOCRUITests */,
-				0A4E28661C7F393D00FAC06F /* Products */,
 				D99CAAF29403B14DF3193ED8 /* Pods */,
-				241B5715F6D8FA20F7E314F5 /* Frameworks */,
+				0A4E28661C7F393D00FAC06F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,15 +112,17 @@
 		0A4E28671C7F393D00FAC06F /* IdCardOCR */ = {
 			isa = PBXGroup;
 			children = (
+				0A4E28681C7F393D00FAC06F /* Supporting Files */,
 				0A4E286B1C7F393D00FAC06F /* AppDelegate.h */,
 				0A4E286C1C7F393D00FAC06F /* AppDelegate.m */,
+				0A4E28741C7F393D00FAC06F /* Assets.xcassets */,
+				0A4E28791C7F393D00FAC06F /* Info.plist */,
+				0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */,
+				0A4E28711C7F393D00FAC06F /* Main.storyboard */,
+				0A4A3F8F1C80505200235912 /* UIImage+IDOImgPrc.h */,
+				0A4A3F901C80505200235912 /* UIImage+IDOImgPrc.mm */,
 				0A4E286E1C7F393D00FAC06F /* ViewController.h */,
 				0A4E286F1C7F393D00FAC06F /* ViewController.m */,
-				0A4E28711C7F393D00FAC06F /* Main.storyboard */,
-				0A4E28741C7F393D00FAC06F /* Assets.xcassets */,
-				0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */,
-				0A4E28791C7F393D00FAC06F /* Info.plist */,
-				0A4E28681C7F393D00FAC06F /* Supporting Files */,
 			);
 			path = IdCardOCR;
 			sourceTree = "<group>";
@@ -124,9 +130,10 @@
 		0A4E28681C7F393D00FAC06F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A4A3F941C80528E00235912 /* ICO-prefix.pch */,
 				0A4E28691C7F393D00FAC06F /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0A4E28811C7F393D00FAC06F /* IdCardOCRTests */ = {
@@ -345,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4A3F911C80505200235912 /* UIImage+IDOImgPrc.mm in Sources */,
 				0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */,
 				0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */,
 				0A4E286A1C7F393D00FAC06F /* main.m in Sources */,
@@ -389,6 +397,7 @@
 				0A4E28721C7F393D00FAC06F /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */ = {
@@ -397,6 +406,7 @@
 				0A4E28771C7F393D00FAC06F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,6 +497,8 @@
 			baseConfigurationReference = 2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdCardOCR/Supporting Files/ICO-Prefix.pch";
 				INFOPLIST_FILE = IdCardOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ivy.IdCardOCR;
@@ -499,6 +511,8 @@
 			baseConfigurationReference = ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdCardOCR/Supporting Files/ICO-Prefix.pch";
 				INFOPLIST_FILE = IdCardOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.ivy.IdCardOCR;
