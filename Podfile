@@ -5,6 +5,7 @@ platform :ios, '7.0'
 
 target 'IdCardOCR' do
 pod 'OpenCV', '~> 3.0.0'
+pod 'TesseractOCRiOS', '~> 4.0.0'
 end
 
 target 'IdCardOCRTests' do

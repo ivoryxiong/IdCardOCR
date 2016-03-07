@@ -12,10 +12,15 @@
 		0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E286C1C7F393D00FAC06F /* AppDelegate.m */; };
 		0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E286F1C7F393D00FAC06F /* ViewController.m */; };
 		0A4E28731C7F393D00FAC06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E28711C7F393D00FAC06F /* Main.storyboard */; };
-		0A4E28751C7F393D00FAC06F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E28741C7F393D00FAC06F /* Assets.xcassets */; };
 		0A4E28781C7F393D00FAC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */; };
 		0A4E28831C7F393D00FAC06F /* IdCardOCRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E28821C7F393D00FAC06F /* IdCardOCRTests.m */; };
 		0A4E288E1C7F393D00FAC06F /* IdCardOCRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */; };
+		0AD88C3C1C8D2EE700D82666 /* FCImageCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */; };
+		0AD88C441C8D2EED00D82666 /* UIColor+FullContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C3F1C8D2EED00D82666 /* UIColor+FullContact.m */; };
+		0AD88C451C8D2EED00D82666 /* UIImage+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C411C8D2EED00D82666 /* UIImage+Rotation.m */; };
+		0AD88C461C8D2EED00D82666 /* UIImage+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C431C8D2EED00D82666 /* UIImage+Sizing.m */; };
+		0AD88C481C8D30A100D82666 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD88C471C8D30A100D82666 /* Images.xcassets */; };
+		0AD88C961C8D3ABC00D82666 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0AD88C951C8D3ABC00D82666 /* tessdata */; };
 		7119FD2847C0F1C954D4B814 /* libPods-IdCardOCR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +52,6 @@
 		0A4E286E1C7F393D00FAC06F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0A4E286F1C7F393D00FAC06F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A4E28721C7F393D00FAC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0A4E28741C7F393D00FAC06F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A4E28771C7F393D00FAC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A4E28791C7F393D00FAC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A4E287E1C7F393D00FAC06F /* IdCardOCRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdCardOCRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,16 @@
 		0A4E28891C7F393D00FAC06F /* IdCardOCRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdCardOCRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCardOCRUITests.m; sourceTree = "<group>"; };
 		0A4E288F1C7F393D00FAC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD88C3A1C8D2EE700D82666 /* FCImageCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCImageCaptureViewController.h; sourceTree = "<group>"; };
+		0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCImageCaptureViewController.m; sourceTree = "<group>"; };
+		0AD88C3E1C8D2EED00D82666 /* UIColor+FullContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FullContact.h"; sourceTree = "<group>"; };
+		0AD88C3F1C8D2EED00D82666 /* UIColor+FullContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FullContact.m"; sourceTree = "<group>"; };
+		0AD88C401C8D2EED00D82666 /* UIImage+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotation.h"; sourceTree = "<group>"; };
+		0AD88C411C8D2EED00D82666 /* UIImage+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotation.m"; sourceTree = "<group>"; };
+		0AD88C421C8D2EED00D82666 /* UIImage+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Sizing.h"; sourceTree = "<group>"; };
+		0AD88C431C8D2EED00D82666 /* UIImage+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Sizing.m"; sourceTree = "<group>"; };
+		0AD88C471C8D30A100D82666 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0AD88C951C8D3ABC00D82666 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdCardOCR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IdCardOCR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdCardOCR.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,10 +126,14 @@
 		0A4E28671C7F393D00FAC06F /* IdCardOCR */ = {
 			isa = PBXGroup;
 			children = (
+				0AD88C951C8D3ABC00D82666 /* tessdata */,
+				0AD88C471C8D30A100D82666 /* Images.xcassets */,
+				0AD88C3D1C8D2EED00D82666 /* Categories */,
+				0AD88C3A1C8D2EE700D82666 /* FCImageCaptureViewController.h */,
+				0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */,
 				0A4E28681C7F393D00FAC06F /* Supporting Files */,
 				0A4E286B1C7F393D00FAC06F /* AppDelegate.h */,
 				0A4E286C1C7F393D00FAC06F /* AppDelegate.m */,
-				0A4E28741C7F393D00FAC06F /* Assets.xcassets */,
 				0A4E28791C7F393D00FAC06F /* Info.plist */,
 				0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */,
 				0A4E28711C7F393D00FAC06F /* Main.storyboard */,
@@ -152,6 +170,19 @@
 				0A4E288F1C7F393D00FAC06F /* Info.plist */,
 			);
 			path = IdCardOCRUITests;
+			sourceTree = "<group>";
+		};
+		0AD88C3D1C8D2EED00D82666 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0AD88C3E1C8D2EED00D82666 /* UIColor+FullContact.h */,
+				0AD88C3F1C8D2EED00D82666 /* UIColor+FullContact.m */,
+				0AD88C401C8D2EED00D82666 /* UIImage+Rotation.h */,
+				0AD88C411C8D2EED00D82666 /* UIImage+Rotation.m */,
+				0AD88C421C8D2EED00D82666 /* UIImage+Sizing.h */,
+				0AD88C431C8D2EED00D82666 /* UIImage+Sizing.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		241B5715F6D8FA20F7E314F5 /* Frameworks */ = {
@@ -278,7 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A4E28781C7F393D00FAC06F /* LaunchScreen.storyboard in Resources */,
-				0A4E28751C7F393D00FAC06F /* Assets.xcassets in Resources */,
+				0AD88C961C8D3ABC00D82666 /* tessdata in Resources */,
+				0AD88C481C8D30A100D82666 /* Images.xcassets in Resources */,
 				0A4E28731C7F393D00FAC06F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,8 +384,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD88C451C8D2EED00D82666 /* UIImage+Rotation.m in Sources */,
 				0A4A3F911C80505200235912 /* UIImage+IDOImgPrc.mm in Sources */,
+				0AD88C3C1C8D2EE700D82666 /* FCImageCaptureViewController.m in Sources */,
+				0AD88C461C8D2EED00D82666 /* UIImage+Sizing.m in Sources */,
 				0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */,
+				0AD88C441C8D2EED00D82666 /* UIColor+FullContact.m in Sources */,
 				0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */,
 				0A4E286A1C7F393D00FAC06F /* main.m in Sources */,
 			);
@@ -432,6 +468,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -448,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -475,6 +512,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -485,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

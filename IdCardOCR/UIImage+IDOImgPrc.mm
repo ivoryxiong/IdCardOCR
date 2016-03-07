@@ -24,6 +24,8 @@
                 for( int j = 0; j < mat.cols; ++j ) {
                     uchar c = mat.at<uchar>(i,j);
                     if (c > 256 * 0.2) {
+                        _mat(i,j) = 255;
+                    } else {
                         _mat(i,j) = 0;
                     }
                 }
@@ -35,7 +37,9 @@
             
             for( int i = 0; i < mat.rows; ++i)
                 for( int j = 0; j < mat.cols; ++j ) {
-                    if (_mat(i,j)[0] * _mat(i,j)[0] + _mat(i,j)[1] * _mat(i,j)[1] + _mat(i,j)[2] * _mat(i,j)[2] > 255 * 255 * 3 *0.2) {
+                    if (_mat(i,j)[0] * _mat(i,j)[0] + _mat(i,j)[1] * _mat(i,j)[1] + _mat(i,j)[2] * _mat(i,j)[2] > 64 * 64 * 3) {
+                        _mat(i,j)[0] = _mat(i,j)[1] = _mat(i,j)[2] = 255;
+                    } else {
                         _mat(i,j)[0] = _mat(i,j)[1] = _mat(i,j)[2] = 0;
                     }
                 }
