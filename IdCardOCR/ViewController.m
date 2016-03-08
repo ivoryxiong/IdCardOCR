@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 
-#import "UIImage+IDOImgPrc.h"
 #import "FCImageCaptureViewController.h"
+#import "ICOCardCaptureViewController.h"
+
+#import "UIImage+ICOPrc.h"
 #import <TesseractOCR/TesseractOCR.h>
 
 @interface ViewController () <FCImageCaptureViewControllerDelegate, G8TesseractDelegate>
@@ -43,6 +45,12 @@
     self.operationQueue = [[NSOperationQueue alloc] init];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSLog(@"%@ - %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+}
+
 -(void)recognizeImageWithTesseract:(UIImage *)image {
     // Animate a progress activity indicator
     [self.activityIndicator startAnimating];
@@ -52,7 +60,7 @@
     // you want Tesseract to use in the "tessdata" folder in the root of the
     // project AND that the "tessdata" folder is a referenced folder and NOT
     // a symbolic group in your project
-    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"iv"];
+    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"cid"];
     
     // Use the original Tesseract engine mode in performing the recognition
     // (see G8Constants.h) for other engine mode options
@@ -61,11 +69,11 @@
     // Let Tesseract automatically segment the page into blocks of text
     // based on its analysis (see G8Constants.h) for other page segmentation
     // mode options
-    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeSingleLine;
     
     // Optionally limit the time Tesseract should spend performing the
     // recognition
-    operation.tesseract.maximumRecognitionTime = 20.0;
+    operation.tesseract.maximumRecognitionTime = 2;
     
     // Set the delegate for the recognition to be this class
     // (see `progressImageRecognitionForTesseract` and
@@ -74,7 +82,7 @@
     
     // Optionally limit Tesseract's recognition to the following whitelist
     // and blacklist of characters
-//    operation.tesseract.charWhitelist = @"0123456789X";
+    operation.tesseract.charWhitelist = @"0123456789X";
     //operation.tesseract.charBlacklist = @"56789";
     
     // Set the image on which Tesseract should perform recognition
@@ -82,15 +90,19 @@
     
     // Optionally limit the region in the image on which Tesseract should
     // perform recognition to a rectangle
-    //operation.tesseract.rect = CGRectMake(20, 20, 100, 100);
+    CGSize s = image.size;
+    operation.tesseract.rect = CGRectMake(s.width / 3 , 4 * s.height / 5, 2 * s.width / 3 , s.height / 5);
     
     // Specify the function block that should be executed when Tesseract
     // finishes performing recognition on the image
+    NSTimeInterval b = [[NSDate date] timeIntervalSince1970];
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
         // Fetch the recognized text
         NSString *recognizedText = tesseract.recognizedText;
         
-        NSLog(@"%@", recognizedText);
+        NSTimeInterval e = [[NSDate date] timeIntervalSince1970];
+
+        NSLog(@"elapse time = %0.3f \n%@", e-b, recognizedText);
         
         // Remove the animated progress activity indicator
         [self.activityIndicator stopAnimating];
@@ -102,6 +114,13 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+    
+//        CGPoint center = self.imageView.center;
+//        self.imageView.image = tesseract.thresholdedImage;
+//        CGRect frame = self.imageView.frame;
+//        frame.size = tesseract.thresholdedImage.size;
+//        self.imageView.frame = frame;
+//        self.imageView.center = center;
     };
     
     // Display the image to be recognized in the view
@@ -138,10 +157,27 @@
     [G8Tesseract clearCache];
 }
 #pragma mark - actions
+- (void)updateImage:(UIImage *)image {
+    if (image) {
+        UIImage *imageToDisplay = [self fixrotation:image];
+        imageToDisplay = [imageToDisplay ico_darkWhiteImage:0.4];
+        self.imageView.image = imageToDisplay;
+        CGFloat height = self.imageView.bounds.size.width / imageToDisplay.size.width * imageToDisplay.size.height;
+        CGRect frame = self.imageView.frame;
+        frame.size.height = height;
+        self.imageView.frame = frame;
+        
+        [self recognizeImageWithTesseract:imageToDisplay];
+    }
+}
+
 - (void)showPicker {
-    FCImageCaptureViewController *imageCaptureController = [FCImageCaptureViewController new];
-    imageCaptureController.delegate = self;
-    [self.navigationController presentViewController:imageCaptureController animated:YES completion:nil];
+    ICOCardCaptureViewController *picker = [ICOCardCaptureViewController new];
+    [self.navigationController pushViewController:picker animated:YES];
+    
+//    FCImageCaptureViewController *imageCaptureController = [FCImageCaptureViewController new];
+//    imageCaptureController.delegate = self;
+//    [self.navigationController presentViewController:imageCaptureController animated:YES completion:nil];
 }
 
 #pragma mark - ImageCaptureViewControllerDelegate

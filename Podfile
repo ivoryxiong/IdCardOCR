@@ -4,8 +4,8 @@ platform :ios, '7.0'
 # use_frameworks!
 
 target 'IdCardOCR' do
-pod 'OpenCV', '~> 3.0.0'
 pod 'TesseractOCRiOS', '~> 4.0.0'
+pod 'CardIO', '~> 5.3.1'
 end
 
 target 'IdCardOCRTests' do

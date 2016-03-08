@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A4A3F911C80505200235912 /* UIImage+IDOImgPrc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A3F901C80505200235912 /* UIImage+IDOImgPrc.mm */; };
 		0A4E286A1C7F393D00FAC06F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E28691C7F393D00FAC06F /* main.m */; };
 		0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E286C1C7F393D00FAC06F /* AppDelegate.m */; };
 		0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E286F1C7F393D00FAC06F /* ViewController.m */; };
@@ -15,6 +14,9 @@
 		0A4E28781C7F393D00FAC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */; };
 		0A4E28831C7F393D00FAC06F /* IdCardOCRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E28821C7F393D00FAC06F /* IdCardOCRTests.m */; };
 		0A4E288E1C7F393D00FAC06F /* IdCardOCRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */; };
+		0A7BD2DA1C8EB74A001B77A4 /* ICOCardCaptureViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BD2D91C8EB74A001B77A4 /* ICOCardCaptureViewController.mm */; };
+		0A7BD2DD1C8EBA0F001B77A4 /* ICOMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */; };
+		0A7BD2E01C8EF627001B77A4 /* UIImage+ICOPrc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BD2DF1C8EF627001B77A4 /* UIImage+ICOPrc.mm */; };
 		0AD88C3C1C8D2EE700D82666 /* FCImageCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */; };
 		0AD88C441C8D2EED00D82666 /* UIColor+FullContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C3F1C8D2EED00D82666 /* UIColor+FullContact.m */; };
 		0AD88C451C8D2EED00D82666 /* UIImage+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C411C8D2EED00D82666 /* UIImage+Rotation.m */; };
@@ -42,8 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A4A3F8F1C80505200235912 /* UIImage+IDOImgPrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IDOImgPrc.h"; sourceTree = "<group>"; };
-		0A4A3F901C80505200235912 /* UIImage+IDOImgPrc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+IDOImgPrc.mm"; sourceTree = "<group>"; };
 		0A4A3F941C80528E00235912 /* ICO-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ICO-prefix.pch"; sourceTree = "<group>"; };
 		0A4E28651C7F393D00FAC06F /* IdCardOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdCardOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E28691C7F393D00FAC06F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +60,12 @@
 		0A4E28891C7F393D00FAC06F /* IdCardOCRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdCardOCRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCardOCRUITests.m; sourceTree = "<group>"; };
 		0A4E288F1C7F393D00FAC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A7BD2D81C8EB74A001B77A4 /* ICOCardCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICOCardCaptureViewController.h; sourceTree = "<group>"; };
+		0A7BD2D91C8EB74A001B77A4 /* ICOCardCaptureViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ICOCardCaptureViewController.mm; sourceTree = "<group>"; };
+		0A7BD2DB1C8EBA0F001B77A4 /* ICOMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICOMacros.h; sourceTree = "<group>"; };
+		0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICOMacros.m; sourceTree = "<group>"; };
+		0A7BD2DE1C8EF627001B77A4 /* UIImage+ICOPrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ICOPrc.h"; sourceTree = "<group>"; };
+		0A7BD2DF1C8EF627001B77A4 /* UIImage+ICOPrc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+ICOPrc.mm"; sourceTree = "<group>"; };
 		0AD88C3A1C8D2EE700D82666 /* FCImageCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCImageCaptureViewController.h; sourceTree = "<group>"; };
 		0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCImageCaptureViewController.m; sourceTree = "<group>"; };
 		0AD88C3E1C8D2EED00D82666 /* UIColor+FullContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FullContact.h"; sourceTree = "<group>"; };
@@ -137,10 +143,12 @@
 				0A4E28791C7F393D00FAC06F /* Info.plist */,
 				0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */,
 				0A4E28711C7F393D00FAC06F /* Main.storyboard */,
-				0A4A3F8F1C80505200235912 /* UIImage+IDOImgPrc.h */,
-				0A4A3F901C80505200235912 /* UIImage+IDOImgPrc.mm */,
 				0A4E286E1C7F393D00FAC06F /* ViewController.h */,
 				0A4E286F1C7F393D00FAC06F /* ViewController.m */,
+				0A7BD2D81C8EB74A001B77A4 /* ICOCardCaptureViewController.h */,
+				0A7BD2D91C8EB74A001B77A4 /* ICOCardCaptureViewController.mm */,
+				0A7BD2DB1C8EBA0F001B77A4 /* ICOMacros.h */,
+				0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */,
 			);
 			path = IdCardOCR;
 			sourceTree = "<group>";
@@ -181,6 +189,8 @@
 				0AD88C411C8D2EED00D82666 /* UIImage+Rotation.m */,
 				0AD88C421C8D2EED00D82666 /* UIImage+Sizing.h */,
 				0AD88C431C8D2EED00D82666 /* UIImage+Sizing.m */,
+				0A7BD2DE1C8EF627001B77A4 /* UIImage+ICOPrc.h */,
+				0A7BD2DF1C8EF627001B77A4 /* UIImage+ICOPrc.mm */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -272,6 +282,7 @@
 				TargetAttributes = {
 					0A4E28641C7F393D00FAC06F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = C7TZDNNKZQ;
 					};
 					0A4E287D1C7F393D00FAC06F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -385,11 +396,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD88C451C8D2EED00D82666 /* UIImage+Rotation.m in Sources */,
-				0A4A3F911C80505200235912 /* UIImage+IDOImgPrc.mm in Sources */,
+				0A7BD2DA1C8EB74A001B77A4 /* ICOCardCaptureViewController.mm in Sources */,
 				0AD88C3C1C8D2EE700D82666 /* FCImageCaptureViewController.m in Sources */,
+				0A7BD2DD1C8EBA0F001B77A4 /* ICOMacros.m in Sources */,
 				0AD88C461C8D2EED00D82666 /* UIImage+Sizing.m in Sources */,
 				0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */,
 				0AD88C441C8D2EED00D82666 /* UIColor+FullContact.m in Sources */,
+				0A7BD2E01C8EF627001B77A4 /* UIImage+ICOPrc.mm in Sources */,
 				0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */,
 				0A4E286A1C7F393D00FAC06F /* main.m in Sources */,
 			);
@@ -535,11 +548,13 @@
 			baseConfigurationReference = 2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IdCardOCR/Supporting Files/ICO-Prefix.pch";
 				INFOPLIST_FILE = IdCardOCR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ivy.IdCardOCR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wumii.apps.ICO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -549,11 +564,13 @@
 			baseConfigurationReference = ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IdCardOCR/Supporting Files/ICO-Prefix.pch";
 				INFOPLIST_FILE = IdCardOCR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ivy.IdCardOCR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wumii.apps.ICO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
