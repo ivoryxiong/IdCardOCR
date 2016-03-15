@@ -1,13 +1,26 @@
 PODS:
   - CardIO (5.3.1)
-  - TesseractOCRiOS (4.0.0)
+  - TesseractOCRiOS (3.4.0)
 
 DEPENDENCIES:
-  - CardIO (~> 5.3.1)
-  - TesseractOCRiOS (~> 4.0.0)
+  - CardIO (from `~/card.io_ios_sdk/`)
+  - TesseractOCRiOS (from `https://shenzhen.wumii.net/git/ThirdParty/github/Tesseract-OCR-iOS.git`,
+    tag `4.0.0`)
+
+EXTERNAL SOURCES:
+  CardIO:
+    :path: ~/card.io_ios_sdk/
+  TesseractOCRiOS:
+    :git: https://shenzhen.wumii.net/git/ThirdParty/github/Tesseract-OCR-iOS.git
+    :tag: 4.0.0
+
+CHECKOUT OPTIONS:
+  TesseractOCRiOS:
+    :git: https://shenzhen.wumii.net/git/ThirdParty/github/Tesseract-OCR-iOS.git
+    :tag: 4.0.0
 
 SPEC CHECKSUMS:
   CardIO: a299efcd0348c3b256a1da53f22951319c3855a2
-  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+  TesseractOCRiOS: 5be498d8fef7a37a38046a05670f9f34b9f042d2
 
 COCOAPODS: 0.39.0

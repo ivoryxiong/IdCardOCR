@@ -7,19 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "ICOCardScanner.h"
 
-#import "FCImageCaptureViewController.h"
-#import "ICOCardCaptureViewController.h"
-
-#import "UIImage+ICOPrc.h"
 #import <TesseractOCR/TesseractOCR.h>
+#import <CardIO/CardIOIdCardViewController.h>
 
-@interface ViewController () <FCImageCaptureViewControllerDelegate, G8TesseractDelegate>
+@interface ViewController () <G8TesseractDelegate, CardIOIdCardViewControllerDelegate>
 @property (nonatomic, strong) UIButton *autoRunnerBtn;
 @property (nonatomic, strong) UIButton *pickerBtn;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) ICOCardScanner *scanner;
 
-@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
@@ -33,8 +31,6 @@
     [self.view addSubview:self.pickerBtn];
     self.pickerBtn.center = CGPointMake(CGRectGetMidX(self.view.bounds), 120);
     
-    [self.view addSubview:self.activityIndicator];
-    self.activityIndicator.center = CGPointMake( self.pickerBtn.center.x,  self.pickerBtn.center.y + 60);
     [self.view addSubview:self.imageView];
 }
 
@@ -51,160 +47,47 @@
     NSLog(@"%@ - %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
--(void)recognizeImageWithTesseract:(UIImage *)image {
-    // Animate a progress activity indicator
-    [self.activityIndicator startAnimating];
-    
-    // Create a new `G8RecognitionOperation` to perform the OCR asynchronously
-    // It is assumed that there is a .traineddata file for the language pack
-    // you want Tesseract to use in the "tessdata" folder in the root of the
-    // project AND that the "tessdata" folder is a referenced folder and NOT
-    // a symbolic group in your project
-    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"cid"];
-    
-    // Use the original Tesseract engine mode in performing the recognition
-    // (see G8Constants.h) for other engine mode options
-    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
-    
-    // Let Tesseract automatically segment the page into blocks of text
-    // based on its analysis (see G8Constants.h) for other page segmentation
-    // mode options
-    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeSingleLine;
-    
-    // Optionally limit the time Tesseract should spend performing the
-    // recognition
-    operation.tesseract.maximumRecognitionTime = 2;
-    
-    // Set the delegate for the recognition to be this class
-    // (see `progressImageRecognitionForTesseract` and
-    // `shouldCancelImageRecognitionForTesseract` methods below)
-    operation.delegate = self;
-    
-    // Optionally limit Tesseract's recognition to the following whitelist
-    // and blacklist of characters
-    operation.tesseract.charWhitelist = @"0123456789X";
-    //operation.tesseract.charBlacklist = @"56789";
-    
-    // Set the image on which Tesseract should perform recognition
-    operation.tesseract.image = image;
-    
-    // Optionally limit the region in the image on which Tesseract should
-    // perform recognition to a rectangle
-    CGSize s = image.size;
-    operation.tesseract.rect = CGRectMake(s.width / 3 , 4 * s.height / 5, 2 * s.width / 3 , s.height / 5);
-    
-    // Specify the function block that should be executed when Tesseract
-    // finishes performing recognition on the image
-    NSTimeInterval b = [[NSDate date] timeIntervalSince1970];
-    operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
-        // Fetch the recognized text
-        NSString *recognizedText = tesseract.recognizedText;
-        
-        NSTimeInterval e = [[NSDate date] timeIntervalSince1970];
-
-        NSLog(@"elapse time = %0.3f \n%@", e-b, recognizedText);
-        
-        // Remove the animated progress activity indicator
-        [self.activityIndicator stopAnimating];
-        
-        // Spawn an alert with the recognized text
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-                                                        message:recognizedText
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    
-//        CGPoint center = self.imageView.center;
-//        self.imageView.image = tesseract.thresholdedImage;
-//        CGRect frame = self.imageView.frame;
-//        frame.size = tesseract.thresholdedImage.size;
-//        self.imageView.frame = frame;
-//        self.imageView.center = center;
-    };
-    
-    // Display the image to be recognized in the view
-    //    self.imageToRecognize.image = operation.tesseract.thresholdedImage;
-    
-    // Finally, add the recognition operation to the queue
-    [self.operationQueue addOperation:operation];
-}
-
-/**
- *  This function is part of Tesseract's delegate. It will be called
- *  periodically as the recognition happens so you can observe the progress.
- *
- *  @param tesseract The `G8Tesseract` object performing the recognition.
- */
-- (void)progressImageRecognitionForTesseract:(G8Tesseract *)tesseract {
-    NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
-}
-
-/**
- *  This function is part of Tesseract's delegate. It will be called
- *  periodically as the recognition happens so you can cancel the recogntion
- *  prematurely if necessary.
- *
- *  @param tesseract The `G8Tesseract` object performing the recognition.
- *
- *  @return Whether or not to cancel the recognition.
- */
-- (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract {
-    return NO;  // return YES, if you need to cancel recognition prematurely
-}
-
-- (void)clearCache:(id)sender {
-    [G8Tesseract clearCache];
-}
 #pragma mark - actions
-- (void)updateImage:(UIImage *)image {
-    if (image) {
-        UIImage *imageToDisplay = [self fixrotation:image];
-        imageToDisplay = [imageToDisplay ico_darkWhiteImage:0.4];
-        self.imageView.image = imageToDisplay;
-        CGFloat height = self.imageView.bounds.size.width / imageToDisplay.size.width * imageToDisplay.size.height;
-        CGRect frame = self.imageView.frame;
-        frame.size.height = height;
-        self.imageView.frame = frame;
-        
-        [self recognizeImageWithTesseract:imageToDisplay];
-    }
-}
 
 - (void)showPicker {
-    ICOCardCaptureViewController *picker = [ICOCardCaptureViewController new];
-    [self.navigationController pushViewController:picker animated:YES];
-    
-//    FCImageCaptureViewController *imageCaptureController = [FCImageCaptureViewController new];
-//    imageCaptureController.delegate = self;
-//    [self.navigationController presentViewController:imageCaptureController animated:YES completion:nil];
+    if (self.scanner == nil) {
+        self.scanner = [[ICOCardScanner alloc] init];
+    }
+    CardIOIdCardViewController *vc = [[CardIOIdCardViewController alloc] initWithIdCardDelegate:self scanner:self.scanner];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
-#pragma mark - ImageCaptureViewControllerDelegate
-
-- (void)imageCaptureControllerCancelledCapture:(FCImageCaptureViewController *)controller{
+#pragma mark - CardIOIdCardViewControllerDelegate
+- (void)userDidCancelIdCardViewController:(CardIOIdCardViewController *) idCardViewController {
+    self.scanner = nil;
     
-    [self recognizeImageWithTesseract:[UIImage imageNamed:@"test"]];
-
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [idCardViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)imageCaptureController:(FCImageCaptureViewController *)controller
-                 capturedImage:(UIImage *)image {
+-(void)userDidProvideIdCardCardInfo:(NSDictionary *)cardInfo inIdCardViewController:(CardIOIdCardViewController *)idCardViewController {
+    NSLog(@"====> card io info = %@", cardInfo);
+    [self showCardInfo:cardInfo];
+    self.scanner = nil;
+    [idCardViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)showCardInfo:(NSDictionary *)cardInfo {
+    UIImage *image = cardInfo[@"image"];
     if (image) {
         UIImage *imageToDisplay = [self fixrotation:image];
         self.imageView.image = imageToDisplay;
-
-//        self.imageView.image = [imageToDisplay ido_darkWhiteImage:0.2];
         CGFloat height = self.imageView.bounds.size.width / imageToDisplay.size.width * imageToDisplay.size.height;
         CGRect frame = self.imageView.frame;
         frame.size.height = height;
         self.imageView.frame = frame;
-        
-        [self recognizeImageWithTesseract:imageToDisplay];
     }
 
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+                                                    message:[NSString stringWithFormat:@"name:%@\nid:%@", cardInfo[@"name"], cardInfo[@"id"]]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 - (UIImage *)fixrotation:(UIImage *)image{
@@ -295,14 +178,6 @@
     }
     
     return _pickerBtn;
-}
-
-- (UIActivityIndicatorView *)activityIndicator {
-    if (_activityIndicator == nil) {
-        _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    }
-    
-    return _activityIndicator;
 }
 
 - (UIImageView *)imageView {

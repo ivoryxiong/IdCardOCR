@@ -14,15 +14,14 @@
 		0A4E28781C7F393D00FAC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */; };
 		0A4E28831C7F393D00FAC06F /* IdCardOCRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E28821C7F393D00FAC06F /* IdCardOCRTests.m */; };
 		0A4E288E1C7F393D00FAC06F /* IdCardOCRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */; };
-		0A7BD2DA1C8EB74A001B77A4 /* ICOCardCaptureViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BD2D91C8EB74A001B77A4 /* ICOCardCaptureViewController.mm */; };
 		0A7BD2DD1C8EBA0F001B77A4 /* ICOMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */; };
 		0A7BD2E01C8EF627001B77A4 /* UIImage+ICOPrc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BD2DF1C8EF627001B77A4 /* UIImage+ICOPrc.mm */; };
-		0AD88C3C1C8D2EE700D82666 /* FCImageCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */; };
 		0AD88C441C8D2EED00D82666 /* UIColor+FullContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C3F1C8D2EED00D82666 /* UIColor+FullContact.m */; };
 		0AD88C451C8D2EED00D82666 /* UIImage+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C411C8D2EED00D82666 /* UIImage+Rotation.m */; };
 		0AD88C461C8D2EED00D82666 /* UIImage+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD88C431C8D2EED00D82666 /* UIImage+Sizing.m */; };
 		0AD88C481C8D30A100D82666 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD88C471C8D30A100D82666 /* Images.xcassets */; };
 		0AD88C961C8D3ABC00D82666 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0AD88C951C8D3ABC00D82666 /* tessdata */; };
+		0AFDDF2E1C97C4DE0011BE4A /* ICOCardScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDDF2C1C97C4DE0011BE4A /* ICOCardScanner.mm */; };
 		7119FD2847C0F1C954D4B814 /* libPods-IdCardOCR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */; };
 /* End PBXBuildFile section */
 
@@ -60,14 +59,10 @@
 		0A4E28891C7F393D00FAC06F /* IdCardOCRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdCardOCRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E288D1C7F393D00FAC06F /* IdCardOCRUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCardOCRUITests.m; sourceTree = "<group>"; };
 		0A4E288F1C7F393D00FAC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7BD2D81C8EB74A001B77A4 /* ICOCardCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICOCardCaptureViewController.h; sourceTree = "<group>"; };
-		0A7BD2D91C8EB74A001B77A4 /* ICOCardCaptureViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ICOCardCaptureViewController.mm; sourceTree = "<group>"; };
 		0A7BD2DB1C8EBA0F001B77A4 /* ICOMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICOMacros.h; sourceTree = "<group>"; };
 		0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICOMacros.m; sourceTree = "<group>"; };
 		0A7BD2DE1C8EF627001B77A4 /* UIImage+ICOPrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ICOPrc.h"; sourceTree = "<group>"; };
 		0A7BD2DF1C8EF627001B77A4 /* UIImage+ICOPrc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+ICOPrc.mm"; sourceTree = "<group>"; };
-		0AD88C3A1C8D2EE700D82666 /* FCImageCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCImageCaptureViewController.h; sourceTree = "<group>"; };
-		0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCImageCaptureViewController.m; sourceTree = "<group>"; };
 		0AD88C3E1C8D2EED00D82666 /* UIColor+FullContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FullContact.h"; sourceTree = "<group>"; };
 		0AD88C3F1C8D2EED00D82666 /* UIColor+FullContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FullContact.m"; sourceTree = "<group>"; };
 		0AD88C401C8D2EED00D82666 /* UIImage+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotation.h"; sourceTree = "<group>"; };
@@ -76,6 +71,8 @@
 		0AD88C431C8D2EED00D82666 /* UIImage+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Sizing.m"; sourceTree = "<group>"; };
 		0AD88C471C8D30A100D82666 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0AD88C951C8D3ABC00D82666 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		0AFDDF2C1C97C4DE0011BE4A /* ICOCardScanner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ICOCardScanner.mm; sourceTree = "<group>"; };
+		0AFDDF2D1C97C4DE0011BE4A /* ICOCardScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICOCardScanner.h; sourceTree = "<group>"; };
 		2B2C32746E1EE86114475B92 /* Pods-IdCardOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdCardOCR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		435995BF842D2E5760DF8AAE /* libPods-IdCardOCR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IdCardOCR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD863DC8976F0421BEF45A5 /* Pods-IdCardOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdCardOCR.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdCardOCR/Pods-IdCardOCR.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,23 +129,21 @@
 		0A4E28671C7F393D00FAC06F /* IdCardOCR */ = {
 			isa = PBXGroup;
 			children = (
-				0AD88C951C8D3ABC00D82666 /* tessdata */,
-				0AD88C471C8D30A100D82666 /* Images.xcassets */,
-				0AD88C3D1C8D2EED00D82666 /* Categories */,
-				0AD88C3A1C8D2EE700D82666 /* FCImageCaptureViewController.h */,
-				0AD88C3B1C8D2EE700D82666 /* FCImageCaptureViewController.m */,
-				0A4E28681C7F393D00FAC06F /* Supporting Files */,
+				0AFDDF2C1C97C4DE0011BE4A /* ICOCardScanner.mm */,
+				0AFDDF2D1C97C4DE0011BE4A /* ICOCardScanner.h */,
 				0A4E286B1C7F393D00FAC06F /* AppDelegate.h */,
 				0A4E286C1C7F393D00FAC06F /* AppDelegate.m */,
+				0AD88C3D1C8D2EED00D82666 /* Categories */,
+				0A7BD2DB1C8EBA0F001B77A4 /* ICOMacros.h */,
+				0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */,
+				0AD88C471C8D30A100D82666 /* Images.xcassets */,
 				0A4E28791C7F393D00FAC06F /* Info.plist */,
 				0A4E28761C7F393D00FAC06F /* LaunchScreen.storyboard */,
 				0A4E28711C7F393D00FAC06F /* Main.storyboard */,
+				0A4E28681C7F393D00FAC06F /* Supporting Files */,
+				0AD88C951C8D3ABC00D82666 /* tessdata */,
 				0A4E286E1C7F393D00FAC06F /* ViewController.h */,
 				0A4E286F1C7F393D00FAC06F /* ViewController.m */,
-				0A7BD2D81C8EB74A001B77A4 /* ICOCardCaptureViewController.h */,
-				0A7BD2D91C8EB74A001B77A4 /* ICOCardCaptureViewController.mm */,
-				0A7BD2DB1C8EBA0F001B77A4 /* ICOMacros.h */,
-				0A7BD2DC1C8EBA0F001B77A4 /* ICOMacros.m */,
 			);
 			path = IdCardOCR;
 			sourceTree = "<group>";
@@ -396,14 +391,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD88C451C8D2EED00D82666 /* UIImage+Rotation.m in Sources */,
-				0A7BD2DA1C8EB74A001B77A4 /* ICOCardCaptureViewController.mm in Sources */,
-				0AD88C3C1C8D2EE700D82666 /* FCImageCaptureViewController.m in Sources */,
 				0A7BD2DD1C8EBA0F001B77A4 /* ICOMacros.m in Sources */,
 				0AD88C461C8D2EED00D82666 /* UIImage+Sizing.m in Sources */,
 				0A4E28701C7F393D00FAC06F /* ViewController.m in Sources */,
 				0AD88C441C8D2EED00D82666 /* UIColor+FullContact.m in Sources */,
 				0A7BD2E01C8EF627001B77A4 /* UIImage+ICOPrc.mm in Sources */,
 				0A4E286D1C7F393D00FAC06F /* AppDelegate.m in Sources */,
+				0AFDDF2E1C97C4DE0011BE4A /* ICOCardScanner.mm in Sources */,
 				0A4E286A1C7F393D00FAC06F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
