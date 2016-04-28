@@ -52,7 +52,7 @@
     return;
   }
 
-  UIImage *image = [y ico_ocr_image_threshold:2];
+  UIImage *image = [y ico_number_ocr_image_threshold:2];
   image = [self imageByDrawingRectsOnImage:image];
   G8RecognitionOperation *numOp = [self recognizeIDCardNumber:image];
   [self.operationQueue addOperation:numOp];
